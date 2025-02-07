@@ -2,14 +2,14 @@
     PROGRAM: Assignment 2b (main.cpp)
     Written by Luis Ibarra
     This program directs a cashier on how much change to give back and correct denomination 
-    Last modified: 2/3/2025 
+    Last modified: 2/6/2025 
 */
 
-#include <iostream>                     //for input via cin
+#include <iostream>                                                                          //for input via cin
 
-using namespace std;                    //to avoid std:: syntax
+using namespace std;                                                                         //to avoid std:: syntax
 
-int main() {                            //start of function
+int main() {                                                                                 //start of function
 
     //initialize variable as double because of math operations
     double amountReceived, amountDue, amountToReturn;
@@ -30,14 +30,28 @@ int main() {                            //start of function
 
     //maths
     amountToReturn = amountReceived - amountDue;
-    dollars = amountToReturn;
-    quarters = (amountToReturn - dollars) * 100 / 25;
-    dimes = (amountToReturn - dollars) - (quarters * .25) / 10;
-    nickels = ((amountToReturn - dollars) - (quarters * .25) - (dimes * .1)) * 100 / 5;
-    pennies = ((amountToReturn - dollars) - (quarters * .25) - (dimes * .1) - (nickels * .05)) * 100 / 1;
-    
+
+    //to get the remaining cents with new variable
+    // add the 0.5 to round up to the nearest cent
+    int remainingCents = ((amountToReturn - static_cast<int>(amountToReturn)) * 100) + 0.5;
+
+    dollars = static_cast<int>(amountToReturn);
+    quarters = remainingCents / 25;
+
+    //update remaining cents
+    remainingCents %= 25;
+    dimes = remainingCents / 10;
+
+    //update remaining cents
+    remainingCents %= 10;
+    nickels = remainingCents / 5;
+
+    //update remaining cents
+    remainingCents %= 5;
+    pennies = remainingCents;
+
     //output results
-    cout << "The amount to return is: " << amountToReturn << endl;
+    cout << "The amount to return is: " << amountToReturn << " USD." << endl;
     cout << "broken down by denomination: " << endl;
     cout << "Dollars: " << dollars << endl;  
     cout << "Quarters: " << quarters << endl;
@@ -46,5 +60,5 @@ int main() {                            //start of function
     cout << "Pennies: " << pennies << endl; 
     cout << "  "<< endl;
 
-    return 0;                           //end the program
+    return 0;                                                                                //end the program
 }

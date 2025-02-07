@@ -3,7 +3,7 @@
     Written by Luis Ibarra
     This program prompts the user for radius and height 
     then outputs volume + surface area of a cone and cylinder
-    Last modified: 2/3/2025
+    Last modified: 2/6/2025
 
     use formulas:
         cylinder(volume)= pi*  pow(r,2) * h
@@ -20,6 +20,7 @@ int main() {                            //start of function
 
     //initialize variable as double because of math operations
     double radius, height, volumeCylinder, volumeCone, sAreaCylinder;
+    const double pi = 3.141592653589793;           //constant value of pi
 
     //instructions for user input
     cout << "Hi! this program will output the Surface Area and Volume of a Cylinder" << endl;      //msg to console
@@ -31,10 +32,10 @@ int main() {                            //start of function
     cin >> radius >> height;
     
     //maths
-    volumeCylinder = (3.1415 * pow(radius, 2)) * height;
-    sAreaCylinder = 2 * 3.1415 * radius * (pow(radius, 2) + height);
+    volumeCylinder = (pi * pow(radius, 2)) * height;
+    sAreaCylinder = 2 * pi * radius * (pow(radius, 2) + height);
 
-    volumeCone = (0.3333) * 3.1415 * pow(radius, 2) * height;
+    volumeCone = (0.3333) * pi * pow(radius, 2) * height;
     
     //output results
     cout << "  "<< endl;
