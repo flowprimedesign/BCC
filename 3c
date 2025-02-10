@@ -1,0 +1,26 @@
+problems that i ran into
+
+in 3a.
+how to add operation from cin and use it in the program.
+
+
+
+
+
+
+in 3b.
+
+
+
+
+
+
+in 3d.
+
+doubles are initialized with a random value, but i wanted them to start at 0 by default.
+figure out how to initialize at 0.
+
+had to figure out that each tax deduction bracket had to be unique and then added up at the end.
+another problem was adding all the deductions at the end, but you can access some of the calculations
+because of the conditional requirement of income. figured out to add all the deductions incrementally, 
+but in each step separately so that each step had its own output.
