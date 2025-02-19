@@ -1,7 +1,8 @@
 /*
-
-    output the multiplication table for 4 and 5.
-
+    PROGRAM: 4c
+    Written by Luis Ibarra
+    Description: This program will output the multiplication table for 4 and 5 using for loops.
+    Last modified: 2/20/25
 */
 
 #include <iostream>
@@ -13,8 +14,9 @@ int main(){
 
     int num1=4, num2=5, num, result;
 
-    cout << "this will return the multiplication table for 4 and 5" << endl;
- 
+    cout << "Let's see the multiplication tables for 4 and 5" << endl;
+    cout << " " << endl;
+    
     //will use a for loop because we know the exact number of times to run the loop (10).
     for (num =1; num <=10; num++){
         result = num1 * num;

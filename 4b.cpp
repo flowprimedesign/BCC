@@ -1,6 +1,8 @@
 /*
-
-    Description: enter two number, program computes multiplication by addition of the second number.
+    PROGRAM: 4b
+    Written by Luis Ibarra
+    Description: enter two numbers, this program computes multiplication by addition of the second number.
+    Last modified: 2/20/25
 */
 
 #include <iostream>
@@ -24,7 +26,7 @@ int main() {
 
     while (number <= numerator) {
         cout << base;
-        number = number + 1;
+        number++;
     }
     cout << "\nThat's all!\n";
    

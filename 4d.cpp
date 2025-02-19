@@ -1,7 +1,10 @@
+/*
+    PROGRAM: 4d
+    Written by Luis Ibarra
+    Description: This program will output an array of stars modeling the pow(2,n) function.
+    Last modified: 2/20/25
 
-//2^n
-// pow(2,n)
-
+*/
 
 #include <iostream>
 #include <cmath>
